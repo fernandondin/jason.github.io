@@ -314,6 +314,4 @@ function anima(){
  c.clearRect(0,0,innerWidth,innerHeight);
  circulos.map((circulo) => circulo.actualiza(circulos));
 }
-
-console.log("llegue a aquí")
 anima();

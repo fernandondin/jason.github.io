@@ -33,11 +33,44 @@ body{
 	bottom: -5px;
 	background-image: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
 }
+.nav ul{
+	display: grid;
+	grid-template-columns: 1fr;
+	gap:20px;
+	list-style: none;
+}
+.nav ul li{
+	background: rgb(116, 130, 203);
+	padding: 5px;
+	border-radius: 15px;
+	transition: all 0.5s;
+}
+.nav ul li a{
+	padding: 5px;
+	color:#fff;
+}
+.nav ul li:nth-child(odd):hover{
+	background: rgb(197, 118, 207);
+	transform: rotate(30deg) scale(1.2);
+}
+.nav ul li:nth-child(even):hover{
+	background: rgb(197, 118, 207);
+	transform: scale(1.2);
+	transform: rotate(-30deg) scale(1.2);
+}
+.nav{
+	font-family: 'Oleo Script Swash Caps', cursive;
+	position: fixed;
+	right: 30px;
+	top:50px;
+	width: 30px;
+	z-index: 2;
+}
  canvas{
 	 width: 100%;
+	 height: 100%;
  }
 /* Container CSS Start  */
-
 .container{
 	width: 70%;
 	height: auto;
