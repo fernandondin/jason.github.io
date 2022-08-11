@@ -4,10 +4,13 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+body{
+	background: #fff;
+}
+
 .main{
 	width: 100%;
 	height: auto;
-	background-color: rgb(245, 245, 245);
 	font-family: 'Oleo Script Swash Caps', cursive;
 	padding: 50px 0;
 	display: grid;
@@ -30,7 +33,9 @@
 	bottom: -5px;
 	background-image: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
 }
-
+ canvas{
+	 width: 100%;
+ }
 /* Container CSS Start  */
 
 .container{
@@ -56,12 +61,13 @@
 	width: 50%;
 	height: auto;
 	padding: 15px 20px;
-	background-color: #fff;
-	box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.284);
+	background-color: rgba(255, 255, 255, 0.4);
+	box-shadow: 1px 2px 12px rgba(0, 0, 0, 1);
 	border-radius: 10px;
 	margin-bottom: 30px;
 	z-index: 99;
 	position: relative;
+	backdrop-filter: blur(2px);
 }
 .container ul li:nth-child(odd){
 	float: left;
@@ -111,7 +117,7 @@ ul li .date{
 }
 img{
   border-radius: 10%;
-  width: 400px;
+  width: 100%;
   object-fit: contain;
 }
 .container ul li:nth-child(odd) .date{
@@ -121,21 +127,26 @@ img{
 .container ul li .circle{
 	width: 30px;
 	height: 30px;
-	background-color: rgba(220, 0, 240, 0.403);
+	background-color: rgba(220, 0, 240, 0);
 	border-radius: 50%;
 	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color:rgba(106, 6, 236,1);
 	top: 0;
 	z-index: 99;
 }
-.container ul li .circle::after{
+.container ul li .circle::before{
 	content: ' ';
-	width: 15px;
-	height: 15px;
-	background-color: rgb(106, 6, 236);
+	width: 30px;
+	height: 30px;
+	background-color: rgba(220, 0, 240, 0.3);
 	border-radius: 50%;
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	z-index: -1;
 	transform: translate(-50%, -50%);
 }
 .container ul li:nth-child(odd) .circle{
